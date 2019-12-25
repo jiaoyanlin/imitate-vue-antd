@@ -7,7 +7,8 @@ module.exports = {
                 "modules": false, // 模块使用 es modules ，不使用 commonJS 规范 
                 "useBuiltIns": 'usage', // 默认 false, 可选 entry , usage；usage表示按需加载
             }
-        ]
+        ],
+        '@vue/babel-preset-jsx',
     ],
     plugins: [
         "@babel/plugin-syntax-dynamic-import", // 支持路由懒加载：()=>import('...')

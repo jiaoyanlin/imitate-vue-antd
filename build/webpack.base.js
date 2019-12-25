@@ -31,14 +31,15 @@ module.exports = (env, mode) => {
                 '@views': path.resolve(__dirname, '../src/views'),
                 '@scss': path.resolve(__dirname, '../src/static/scss'),
                 '@images': path.resolve(__dirname, '../src/static/images'),
+                '@ant-design-vue': path.resolve(__dirname, '../src/components'),
             },
-            extensions: ['.js', '.vue'], // 配置扩展名
+            extensions: ['.js', 'jsx', '.vue'], // 配置扩展名
             modules: [path.resolve(__dirname, '../node_modules')], // 使用绝对路径指明第三方模块存放的位置，以减少搜索步骤
         },
         module: {
             rules: [
                 {
-                    test: /\.(js|vue)$/,
+                    test: /\.(js|vue|jsx)$/,
                     loader: 'eslint-loader',
                     enforce: 'pre',
                     // 指定检查的目录
@@ -53,7 +54,7 @@ module.exports = (env, mode) => {
                     loader: 'vue-loader'
                 },
                 {
-                    test: /\.js$/,
+                    test: /\.(js|jsx)$/,
                     use: 'happypack/loader?id=babel',
                     exclude: /node_modules/,
                     include: path.resolve(__dirname, '../src')

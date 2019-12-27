@@ -1,6 +1,7 @@
 <template>
     <div>
         home
+        <a-button href="xxx"> dd </a-button>
     </div>
 </template>
 

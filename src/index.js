@@ -1,10 +1,15 @@
-import '@src/plugins';
+// import '@src/plugins';
+
+import './components/testStyle/index.less';
+
 import '@scss/index.scss';
 import Vue from 'vue';
 import router from '@src/router/index.js';
 import App from '@views/app.vue';
 import store from '@src/store/index.js';
 import { sync } from 'vuex-router-sync';
+
+import './components.js';
 
 if (process.env.CUSTOM_MODE !== 'production') {
     console.log('CUSTOM_ISDEV:', process.env.CUSTOM_ISDEV);
